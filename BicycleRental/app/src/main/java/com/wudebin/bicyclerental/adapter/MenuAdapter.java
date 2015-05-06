@@ -24,9 +24,10 @@ public class MenuAdapter extends BaseAdapter {
     public MenuAdapter(Context context)
     {
         this.mContext=context;
-        mMenuIcon=new int[]{R.drawable.menu_systemset_normal};
-        mMenuIconChecked=new int[]{R.drawable.menu_systemset_press};
-        mMenuItem=new String[]{ mContext.getString(R.string.menu_syssetting)};
+        mMenuIcon=new int[]{R.drawable.menu_systemset_normal,R.drawable.menu_systemset_normal,R.drawable.menu_systemset_normal};
+        mMenuIconChecked=new int[]{R.drawable.menu_systemset_press,R.drawable.menu_systemset_press,R.drawable.menu_systemset_press};
+        mMenuItem=new String[]{ mContext.getString(R.string.menu_rental),mContext.getString(R.string.menu_collect),mContext.getString(R.string.menu_syssetting)};
+
     }
     public void changeSelected(int positon){
         if(positon != mSelect){

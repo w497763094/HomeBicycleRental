@@ -7,7 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.wudebin.bicyclerental.R;
+import com.wudebin.bicyclerental.collect.CollectFragment;
 import com.wudebin.bicyclerental.personalsetting.PersonalSettingFragment;
+import com.wudebin.bicyclerental.rental.RentalFragment;
 import com.wudebin.bicyclerental.systemsetting.SystemSettingFragment;
 
 
@@ -26,6 +28,8 @@ public class MainActivity extends BaseActivity
 
     private SystemSettingFragment mSystemSettingFragment;
     private PersonalSettingFragment mPerSettingFragment;
+    private RentalFragment mRentalFragment;
+    private CollectFragment mCollectFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,8 @@ public class MainActivity extends BaseActivity
     {
         mSystemSettingFragment = new SystemSettingFragment();
         mPerSettingFragment=new PersonalSettingFragment();
+        mRentalFragment=new RentalFragment();
+        mCollectFragment=new CollectFragment();
     }
 
     @Override
@@ -55,6 +61,12 @@ public class MainActivity extends BaseActivity
                 fragmentManager.beginTransaction().replace(R.id.container, mPerSettingFragment).commit();
                 break;
             case 1:
+                fragmentManager.beginTransaction().replace(R.id.container, mRentalFragment).commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction().replace(R.id.container, mCollectFragment).commit();
+                break;
+            case 3:
                 fragmentManager.beginTransaction().replace(R.id.container, mSystemSettingFragment).commit();
                 break;
 
