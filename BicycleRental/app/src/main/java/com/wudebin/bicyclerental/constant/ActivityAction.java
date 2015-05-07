@@ -16,4 +16,5 @@ public class ActivityAction {
     public static final String CHANGE_PWD_ACTIVITY = "com.wudebin.bicyclerental.action.changepwd";
     public static final String FEEDBACK_ACTIVITY="com.wudebin.bicyclerental.action.feedback";
     public static final String CONTACTUS_ACTIVITY="com.wudebin.bicyclerental.action.contactus";
+    public static final String BICYCLEDETAIL_ACTIVITY="com.wudebin.bicyclerental.action.rentaldetail";
 }

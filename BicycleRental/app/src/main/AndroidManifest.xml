@@ -103,6 +103,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".rental.RentalDetailActivity">
+            <intent-filter>
+                <action android:name="com.wudebin.bicyclerental.action.rentaldetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

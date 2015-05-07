@@ -1,5 +1,7 @@
 package com.wudebin.bicyclerental.rental;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,11 +9,18 @@ import android.view.ViewGroup;
 
 import com.wudebin.bicyclerental.R;
 import com.wudebin.bicyclerental.adapter.FooterAdapter;
+import com.wudebin.bicyclerental.constant.ActivityAction;
 
 /**
  * Created by wudebin on 15-5-4.
  */
 public class RentalRecyclerAdapter extends FooterAdapter {
+
+    private Context context;
+    public RentalRecyclerAdapter(Context context)
+    {
+        this.context=context;
+    }
 
     @Override
     public boolean useFooter() {
@@ -27,7 +36,14 @@ public class RentalRecyclerAdapter extends FooterAdapter {
 
     @Override
     public void onBindContentItemView(RecyclerView.ViewHolder holder, int position) {
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setAction(ActivityAction.BICYCLEDETAIL_ACTIVITY);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

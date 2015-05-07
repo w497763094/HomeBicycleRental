@@ -34,7 +34,7 @@ public class RentalFragment extends AbstractBaseFragment {
 
     public void init(View v)
     {
-        mAdapter=new RentalRecyclerAdapter();
+        mAdapter=new RentalRecyclerAdapter(getActivity());
         mLayoutManager = new LinearLayoutManager(getActivity());
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mToolbar=(Toolbar)v.findViewById(R.id.toolbar);
