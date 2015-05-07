@@ -110,6 +110,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".imagecropper.CropImageActivity">
+            <intent-filter>
+                <action android:name="com.wudebin.bicyclerental.action.cropimage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
