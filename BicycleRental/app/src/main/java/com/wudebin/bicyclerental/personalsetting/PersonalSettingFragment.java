@@ -85,6 +85,7 @@ public class PersonalSettingFragment extends AbstractBaseFragment implements Obs
         mToolbar = (Toolbar) v.findViewById(R.id.toolbar);
         mToolbar.setBackgroundColor(Color.TRANSPARENT);
         ((ActionBarActivity) getActivity()).setSupportActionBar(mToolbar);
+        ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationIcon(R.drawable.ic_drawer);
         mPhoto = (ImageView) v.findViewById(R.id.perset_photo);
         mImageView = v.findViewById(R.id.perset_photo);

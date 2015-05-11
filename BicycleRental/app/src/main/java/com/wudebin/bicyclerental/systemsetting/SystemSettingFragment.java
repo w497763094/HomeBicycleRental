@@ -58,7 +58,6 @@ public class SystemSettingFragment extends AbstractBaseFragment {
         mAdapter= new SystemSettingRecycleAdapter(mdata_text,mdata_icon);
         mToolbar.setTitle(R.string.menu_syssetting);
         mToolbar.setTitleTextColor(Color.WHITE);
-
         ((ActionBarActivity) getActivity()).setSupportActionBar(mToolbar);
         ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationIcon(R.drawable.ic_drawer);

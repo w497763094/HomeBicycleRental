@@ -40,10 +40,9 @@ public class CollectFragment extends AbstractBaseFragment {
         mToolbar=(Toolbar)v.findViewById(R.id.toolbar);
         mToolbar.setTitle(R.string.menu_collect);
         mToolbar.setTitleTextColor(Color.WHITE);
-        mToolbar.setNavigationIcon(R.drawable.ic_drawer);
         ((ActionBarActivity) getActivity()).setSupportActionBar(mToolbar);
         ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        mToolbar.setNavigationIcon(R.drawable.ic_drawer);
         mRecyclerView= (RecyclerView) v.findViewById(R.id.rental_recyclerview);
         mSwipeRefreshLayout = (SwipeRefreshLayout) v.findViewById(R.id.rental_swipe_container);
         mSwipeRefreshLayout.setRefreshing(false);

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="5dp"
+    android:paddingTop="2dp"
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
     >
@@ -36,6 +36,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:text="永久24速自行车26寸铝合金山地车/禧玛诺变速/锁死前叉/建大轮胎/培林花鼓 8.5远腾 黑红色 热卖 26寸"/>
             </LinearLayout>
         </LinearLayout>

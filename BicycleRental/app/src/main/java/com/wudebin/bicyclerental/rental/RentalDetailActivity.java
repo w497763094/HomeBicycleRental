@@ -7,8 +7,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.wudebin.bicyclerental.R;
@@ -24,11 +26,13 @@ public class RentalDetailActivity extends BaseActivity {
     private Toolbar mToolbar;
     private ViewPager viewPager;
     private List<View> list;
-
+    private LayoutInflater LayoutInflater;
+    private Button bookBicycle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bicycledetail);
+        LayoutInflater=getLayoutInflater();
         init();
     }
 
@@ -44,6 +48,7 @@ public class RentalDetailActivity extends BaseActivity {
                 finish();
             }
         });
+        bookBicycle= (Button) findViewById(R.id.book_bicycle);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         LayoutInflater lf = getLayoutInflater().from(this);
         list = new ArrayList<View>();
@@ -57,8 +62,20 @@ public class RentalDetailActivity extends BaseActivity {
         list.add(view3);
         MyAdapter adapter = new MyAdapter();
         viewPager.setAdapter(adapter);
+        bookBicycle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.bicycle_collect,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     class MyAdapter extends PagerAdapter {
 
