@@ -110,7 +110,7 @@ public class PersonSettingRecyclerAdapter extends RecyclerView.Adapter<RecyclerV
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         if (viewHolder instanceof ItemViewHolder) {
-            ((ItemViewHolder) viewHolder).top_content.setText(mItems.get(position - 3));
+//            ((ItemViewHolder) viewHolder).top_content.setText(mItems.get(position - 3));
         }else if(viewHolder instanceof SignViewHolder){
             ((SignViewHolder) viewHolder).textView.setText(mContext.getResources().getString(R.string.first_sign));
         }else if(viewHolder instanceof LastViewHolder){

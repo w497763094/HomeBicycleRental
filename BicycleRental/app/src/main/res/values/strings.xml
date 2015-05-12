@@ -23,7 +23,7 @@
     <string name="find_new_version">发现新版本</string>
     <string name="recyclerview_loadmore">加载更多...</string>
     <string name="recyclerview_noloadmore">没有更多</string>
-    <string name="no_more_class">没有更多学校和班级信息了</string>
+    <string name="no_more_class">没有更多信息了</string>
     <string name="first_sign">个性签名：这个人很懒，什么都没留下</string>
     <!--register&login-->
     <string name="write_used_pwd">请输入原密码</string>

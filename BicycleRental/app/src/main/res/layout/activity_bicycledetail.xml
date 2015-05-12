@@ -16,12 +16,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"></android.support.v4.view.ViewPager>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="1/3"/>
+</RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,12 +42,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="名称:" />
+                    android:text="名       称:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:text="川崎山地车自行车"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -54,7 +66,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:text="5"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,12 +79,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="类别:" />
+                    android:text="类       别:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:text="山地车"/>
             </LinearLayout>
 
             <LinearLayout
@@ -89,7 +103,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:text="毎小时1元，不足一小时按一小时计算，每天8元，不足一天按一天计算"/>
             </LinearLayout>
 
             <LinearLayout
@@ -102,12 +117,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="简介:" />
+                    android:text="简       介:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:text="该自行车采用双碟刹，无论大气的外观还是精准的变速，都是经典之作，不论是设计，材质，做工都堪称奇迹，只为呈现更好的发烧变速"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -121,9 +137,11 @@
 
         <Button
             android:id="@+id/book_bicycle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/btn_getcode_normal"
+            android:background="@drawable/guide_login_selector"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:text="预定" />
     </LinearLayout>
 

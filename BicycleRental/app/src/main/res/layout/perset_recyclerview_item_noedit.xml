@@ -41,7 +41,7 @@
                     android:layout_marginLeft="20dp"
                     android:textColor="@color/hintcolor"
                     android:textSize="15dp"
-                    android:text="天津市南开中学"/>
+                    android:text="软件技术专业"/>
 
 
             </RelativeLayout>
