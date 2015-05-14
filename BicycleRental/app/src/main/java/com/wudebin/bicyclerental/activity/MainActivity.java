@@ -10,6 +10,7 @@ import com.wudebin.bicyclerental.R;
 import com.wudebin.bicyclerental.collect.CollectFragment;
 import com.wudebin.bicyclerental.personalsetting.PersonalSettingFragment;
 import com.wudebin.bicyclerental.rental.RentalFragment;
+import com.wudebin.bicyclerental.rentalrecord.RentalRecordFragment;
 import com.wudebin.bicyclerental.systemsetting.SystemSettingFragment;
 
 
@@ -30,6 +31,8 @@ public class MainActivity extends BaseActivity
     private PersonalSettingFragment mPerSettingFragment;
     private RentalFragment mRentalFragment;
     private CollectFragment mCollectFragment;
+    private RentalRecordFragment mRentalRecordFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,20 +46,19 @@ public class MainActivity extends BaseActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
-    public void  initFragment()
-    {
+    public void initFragment() {
         mSystemSettingFragment = new SystemSettingFragment();
-        mPerSettingFragment=new PersonalSettingFragment();
-        mRentalFragment=new RentalFragment();
-        mCollectFragment=new CollectFragment();
+        mPerSettingFragment = new PersonalSettingFragment();
+        mRentalFragment = new RentalFragment();
+        mCollectFragment = new CollectFragment();
+        mRentalRecordFragment = new RentalRecordFragment();
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        switch (position)
-        {
+        switch (position) {
             case 0:
                 fragmentManager.beginTransaction().replace(R.id.container, mPerSettingFragment).commit();
                 break;
@@ -64,9 +66,12 @@ public class MainActivity extends BaseActivity
                 fragmentManager.beginTransaction().replace(R.id.container, mRentalFragment).commit();
                 break;
             case 2:
-                fragmentManager.beginTransaction().replace(R.id.container, mCollectFragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.container, mRentalRecordFragment).commit();
                 break;
             case 3:
+                fragmentManager.beginTransaction().replace(R.id.container, mCollectFragment).commit();
+                break;
+            case 4:
                 fragmentManager.beginTransaction().replace(R.id.container, mSystemSettingFragment).commit();
                 break;
 

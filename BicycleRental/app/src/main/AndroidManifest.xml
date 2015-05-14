@@ -33,7 +33,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.LoginActivity">
+        <activity android:name=".login.LoginActivity"
+            >
             <intent-filter>
                 <action android:name="com.wudebin.bicyclerental.action.login" />
 

@@ -1,6 +1,8 @@
 package com.wudebin.bicyclerental.login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,6 +10,12 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.Selection;
 import android.text.method.NumberKeyListener;
+import android.util.AttributeSet;
+import android.view.InflateException;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -31,7 +39,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private MaterialEditText mEditPwd;
     private CheckBox mPwdVisible;
     private Intent intent = new Intent();
-
+    private int loginType=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,12 +94,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
                         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+                        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
             }
 
             @Override
             public int getInputType() {
-                return InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD;
+                return InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD;
             }
         });
     }
@@ -121,6 +129,30 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         startActivity(intent);
         this.finish();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.admin_login, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.action_admin:
+                if(loginType==1) {
+                    loginType = 2;
+                    item.setTitle("学生");
+                    mForgetPassword.setVisibility(View.INVISIBLE);
+                }else if(loginType==2)
+                {
+                    loginType = 1;
+                    item.setTitle("管理员");
+                    mForgetPassword.setVisibility(View.VISIBLE);
+                }
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
